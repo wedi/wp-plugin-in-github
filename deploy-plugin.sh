@@ -25,7 +25,7 @@
 PLUGINSLUG=${PWD##*/}                    # The name of the Plugin. By default the directory name is used
 MAINFILE="$PLUGINSLUG.php"               # this should be the name of your main php file in the WordPress Plugin
 ASSETS_DIR="assets-wp-repo"              # the name of the assets directory that you are using
-SVNUSER="sudar"                          # your svn username
+SVNUSER="wedi"                           # your svn username
 TMPDIR="/tmp"                            # temp directory path
 CURRENTDIR=`pwd`
 COMMIT_MSG_FILE='wp-plugin-commit-msg.tmp'
