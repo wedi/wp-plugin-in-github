@@ -58,6 +58,10 @@ markdowntowp () {
         _sed 's/^(\*\*|__)'"$m"':(\*\*|__)/'"$m"':/g' $2
     done
 
+    # remove screenshots ![ScreenShot](url)
+    # !\[ScreenShot\]([^)]*)
+    _sed "s/!\[ScreenShot\]([^)]*)\)[\n]?//g" $2
+
     _sed "s/###([^#]+)###/=\1=/g" $2
     _sed "s/##([^#]+)##/==\1==/g" $2
     _sed "s/#([^#]+)#/===\1===/g" $2
